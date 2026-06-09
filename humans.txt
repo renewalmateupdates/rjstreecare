@@ -1,0 +1,21 @@
+/* BUSINESS */
+Name: RJ's Tree Care
+Owner/Operator: Ron
+Phone: (765) 570-3398
+Email: info@rjstreecare.com
+Address: 9588 Akes Hill Rd, Dillsboro, IN 47018
+Home bases: Rushville, IN and Dillsboro, IN
+Licensed and insured.
+22 years of experience.
+
+/* WEBSITE */
+Built by: Joshua Bostic (Gilgamesh Enterprise LLC)
+Framework: Static HTML + CSS + Vanilla JS
+Contact form: Zoho SMTP (info@rjstreecare.com)
+Hosted: Vercel (free tier)
+Last updated: June 2026
+
+/* SERVICE AREA */
+Southeast Indiana (Dillsboro, Rushville, Batesville, Aurora, Lawrenceburg, Rising Sun, and surrounding communities)
+Greater Cincinnati, OH metro area
+Northern Kentucky (Florence, Covington, Newport, Burlington, Hebron, and corridor toward Louisville)
