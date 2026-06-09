@@ -1,0 +1,9 @@
+{
+  "name": "rjstreecare",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RJ's Tree Care — static site with a self-hosted contact form email API on Vercel serverless functions.",
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work | RJ's Tree Care | Dillsboro & Rushville, IN</title>
+  <meta name="description" content="Real photos of RJ's Tree Care on the job — tree removal, trimming, and stump grinding around Dillsboro, Rushville, and the surrounding area.">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="emergency-bar">🚨 Storm damage or a dangerous tree? Reach out — we prioritize urgent situations as fast as we can. <a href="tel:7655703398">Call Now: (765) 570-3398</a></div>
+<nav class="nav"><div class="nav__inner"><a href="index.html" class="nav__logo"><div class="nav__logo-icon nav__logo-icon--img"><img src="images/rj/business-sign.jpg" alt="RJ's Tree Care logo"></div><div class="nav__logo-text"><span class="nav__logo-name">RJ's Tree Care</span><span class="nav__logo-sub">TREE SERVICE</span></div></a><div class="nav__links"><div class="nav__dropdown"><a href="services.html" class="nav__link">Services ▾</a><div class="nav__dropdown-menu"><a href="tree-removal.html" class="nav__dropdown-item"><span>🪓</span> Tree Removal</a><a href="trimming-pruning.html" class="nav__dropdown-item"><span>✂️</span> Trimming & Pruning</a><a href="stump-grinding.html" class="nav__dropdown-item"><span>⚙️</span> Stump Grinding</a><a href="emergency.html" class="nav__dropdown-item"><span>🚨</span> Emergency Service</a></div></div><a href="about.html" class="nav__link">About</a><a href="gallery.html" class="nav__link active">Gallery</a><a href="service-area.html" class="nav__link">Service Area</a><a href="blog.html" class="nav__link">Blog</a><a href="contact.html" class="nav__link">Contact</a></div><div class="nav__right"><a href="tel:7655703398" class="nav__phone">📞 (765) 570-3398</a><a href="contact.html" class="btn btn-primary btn-sm">Free Quote</a></div><button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div><div class="nav__mobile"><a href="index.html" class="nav__mobile-link">Home</a><a href="services.html" class="nav__mobile-link">Services</a><a href="gallery.html" class="nav__mobile-link">Gallery</a><a href="contact.html" class="nav__mobile-link">Contact</a><a href="tel:7655703398" class="btn btn-primary" style="margin-top:.75rem;text-align:center;justify-content:center;">📞 Call Now</a></div></nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Gallery</span></div>
+    <span class="section-label">Our Work</span>
+    <h1>See Us in Action</h1>
+    <p>Real photos from real jobs — Ron and the crew out in the field around Dillsboro, Rushville, and the surrounding area. Click any photo to see it full size.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div style="margin-bottom:2rem;display:flex;gap:.75rem;flex-wrap:wrap;">
+      <button onclick="filterGallery('all')" class="btn btn-sm btn-green gallery-filter active" data-filter="all">All Work</button>
+      <button onclick="filterGallery('removal')" class="btn btn-sm gallery-filter" data-filter="removal" style="background:var(--cream);color:var(--text);border:1.5px solid var(--cream-dark);">Tree Removal</button>
+      <button onclick="filterGallery('trimming')" class="btn btn-sm gallery-filter" data-filter="trimming" style="background:var(--cream);color:var(--text);border:1.5px solid var(--cream-dark);">Trimming</button>
+      <button onclick="filterGallery('stump')" class="btn btn-sm gallery-filter" data-filter="stump" style="background:var(--cream);color:var(--text);border:1.5px solid var(--cream-dark);">Stump Grinding</button>
+      <button onclick="filterGallery('equipment')" class="btn btn-sm gallery-filter" data-filter="equipment" style="background:var(--cream);color:var(--text);border:1.5px solid var(--cream-dark);">Equipment & Crew</button>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="gallery-item" data-category="removal"><img src="images/rj/crane.jpg" alt="Crane lifting tree sections during a residential tree removal" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">Crane-assisted removal — handling the big ones safely</span></div></div>
+      <div class="gallery-item" data-category="trimming"><img src="images/rj/bucket-tree.jpg" alt="Bucket truck reaching into a tall canopy for a trim job" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">Working the canopy from the bucket</span></div></div>
+      <div class="gallery-item" data-category="stump"><img src="images/rj/stump-removal.jpg" alt="Ron operating a stump grinder on a residential lawn" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">Grinding a stump level with the lawn</span></div></div>
+      <div class="gallery-item" data-category="removal"><img src="images/rj/linebucket-truck-3.jpg" alt="Bucket truck on site with cut branches staged for cleanup" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">On site and getting it done</span></div></div>
+      <div class="gallery-item" data-category="trimming"><img src="images/rj/bucket-tree-2.jpg" alt="Crew member working high in a tree from a bucket truck" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">High in the canopy — precision cuts, no guesswork</span></div></div>
+      <div class="gallery-item" data-category="removal"><img src="images/rj/after-photo.jpg" alt="Backyard cleared of brush with a debris pile burning near the shed" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">Brush cleared, burned, and the yard left tidy</span></div></div>
+      <div class="gallery-item" data-category="equipment"><img src="images/rj/linebucket-truck.jpg" alt="RJ's Tree Care bucket truck parked and ready for the next job" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">Our truck — ready to roll</span></div></div>
+      <div class="gallery-item" data-category="equipment"><img src="images/rj/linebucket-truck-2.jpg" alt="Bucket truck positioned near a large tree for canopy work" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">Reaching the canopy without tearing up your yard</span></div></div>
+      <div class="gallery-item" data-category="trimming"><img src="images/rj/climber.jpg" alt="Climber working high in a tall tree on ropes" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">Climbing in where the bucket can't reach</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox"><button class="lightbox__close">✕</button><button class="lightbox__prev">‹</button><img src="" alt=""><button class="lightbox__next">›</button></div>
+
+<section class="section section--gray" style="text-align:center;">
+  <div class="container">
+    <h2>Your Yard Could Be Next</h2>
+    <p style="color:var(--text-muted);max-width:480px;margin:1rem auto 2rem;">Free estimates. Same-day response. Work that looks this good when we leave.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"><a href="contact.html" class="btn btn-primary btn-lg">Get Free Estimate →</a><a href="tel:7655703398" class="btn btn-green btn-lg">📞 Call Now</a></div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><div class="footer__brand-logo"><div class="footer__brand-icon footer__brand-icon--img"><img src="images/rj/business-sign.jpg" alt="RJ's Tree Care logo"></div><span class="footer__brand-name">RJ's Tree Care</span></div><p>Licensed, insured, and family owned. Serving the area with over two decades of hands-on tree care experience.</p></div><div><h4>Services</h4><ul class="footer__links"><li><a href="tree-removal.html" class="footer__link">Tree Removal</a></li><li><a href="trimming-pruning.html" class="footer__link">Trimming & Pruning</a></li><li><a href="stump-grinding.html" class="footer__link">Stump Grinding</a></li><li><a href="emergency.html" class="footer__link">Emergency Service</a></li></ul></div><div><h4>Company</h4><ul class="footer__links"><li><a href="about.html" class="footer__link">About Us</a></li><li><a href="gallery.html" class="footer__link">Gallery</a></li><li><a href="faq.html" class="footer__link">FAQ</a></li><li><a href="wall-of-love.html" class="footer__link">Reviews</a></li><li><a href="contact.html" class="footer__link">Contact</a></li></ul></div><div><h4>Contact</h4><div class="footer__contact"><div class="footer__contact-item"><span>📞</span><a href="tel:7655703398" class="footer__link" style="color:var(--white);">(765) 570-3398</a></div><div class="footer__contact-item"><span>✉️</span><a href="mailto:info@rjstreecare.com" class="footer__link" style="color:var(--white);">info@rjstreecare.com</a></div></div></div></div><div class="footer__bottom"><span>© 2025 RJ's Tree Care.</span></div></div></footer>
+<div class="sticky-cta"><div class="sticky-cta__top"><span class="sticky-cta__label">See our work — get yours done</span></div><div class="sticky-cta__btns"><a href="tel:7655703398" class="sticky-cta__call">📞 Call Now</a><a href="contact.html" class="sticky-cta__quote">Free Quote</a></div></div>
+
+<script src="js/main.js"></script>
+<script>
+function filterGallery(cat) {
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.style.display = (cat === 'all' || item.dataset.category === cat) ? 'block' : 'none';
+  });
+  document.querySelectorAll('.gallery-filter').forEach(btn => {
+    const isActive = btn.dataset.filter === cat;
+    btn.className = isActive ? 'btn btn-sm btn-green gallery-filter active' : 'btn btn-sm gallery-filter';
+    if (!isActive) btn.style.cssText = 'background:var(--cream);color:var(--text);border:1.5px solid var(--cream-dark);';
+    else btn.style.cssText = '';
+  });
+}
+</script>
+</body>
+</html>
+
