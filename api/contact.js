@@ -32,6 +32,37 @@ const FIELD_LABELS = {
 // Internal/anti-spam fields that should never be rendered into the email body
 const SKIP_FIELDS = new Set(['_subject', '_gotcha']);
 
+// Phrases that show up almost exclusively in "we'll do your SEO/video/marketing" pitches,
+// not in real tree service requests. Case-insensitive substring match against the
+// "message" field. Real submissions about trees never use this language.
+const SPAM_PITCH_PHRASES = [
+  'seo',
+  'search engine ranking',
+  'search engine optimization',
+  'backlink',
+  'increase your traffic',
+  'drive more traffic',
+  'google ranking',
+  'rank higher',
+  'social media marketing',
+  'digital marketing',
+  'video to advertise',
+  'promotional video',
+  'website design services',
+  'web design services',
+  'our prices start',
+  'samples of our previous work',
+  'portfolio of our work',
+  'guest post',
+  'link building',
+];
+
+function isSpamPitch(message) {
+  if (typeof message !== 'string' || !message.trim()) return false;
+  const lower = message.toLowerCase();
+  return SPAM_PITCH_PHRASES.some((phrase) => lower.includes(phrase));
+}
+
 function escapeHtml(value) {
   return String(value)
     .replace(/&/g, '&amp;')
@@ -54,6 +85,13 @@ module.exports = async (req, res) => {
   // Honeypot — a hidden field real visitors never fill in. Bots usually fill everything.
   // We return 200 so the bot thinks it worked, but we never send an email.
   if (data._gotcha) {
+    return res.status(200).json({ ok: true });
+  }
+
+  // SEO/marketing-pitch spam — people manually filling out the real form fields to
+  // solicit services, not request tree work. Pretend success, don't email Ron.
+  if (isSpamPitch(data.message)) {
+    console.log('Blocked likely spam submission (marketing pitch detected in message field)');
     return res.status(200).json({ ok: true });
   }
 
