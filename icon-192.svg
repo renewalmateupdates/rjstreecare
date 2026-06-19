@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <rect width="192" height="192" rx="32" fill="#1a3d1a"/>
+  <!-- Tree trunk -->
+  <rect x="88" y="128" width="16" height="36" rx="4" fill="#6b4226"/>
+  <!-- Tree layers -->
+  <polygon points="96,28 136,90 56,90" fill="#2d7a2d"/>
+  <polygon points="96,52 140,106 52,106" fill="#34a134"/>
+  <polygon points="96,72 144,130 48,130" fill="#3dbf3d"/>
+  <!-- RJ text -->
+  <text x="96" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="0" fill="white">RJ</text>
+</svg>

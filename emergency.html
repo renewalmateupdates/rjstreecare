@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Emergency Tree Service","provider":{"@type":"LocalBusiness","name":"RJ's Tree Care","telephone":"(765) 570-3398"},"areaServed":["Dillsboro, IN","Rushville, IN","Batesville, IN","Aurora, IN","Lawrenceburg, IN","Cincinnati, OH","Florence, KY","Covington, KY","Newport, KY"],"description":"Emergency tree removal for storm damage, fallen trees, and dangerous limbs. Prioritized response. Serving Dillsboro, Rushville, the Cincinnati tri-state area, and Northern Kentucky toward Louisville."}</script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2d6a2d">
+  <link rel="apple-touch-icon" href="/icon-192.svg">
 </head>
 <body>
 <div class="emergency-bar" style="font-size:1rem;padding:.75rem 1.5rem;">🚨 Tree emergency? Reach out — <a href="tel:7655703398" style="font-size:1.1rem;font-weight:800;">(765) 570-3398</a> — we'll prioritize it and get to you as fast as we can</div>
@@ -72,6 +75,12 @@
 <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><div class="footer__brand-logo"><div class="footer__brand-icon footer__brand-icon--img"><img src="images/rj/business-sign.jpg" alt="RJ's Tree Care logo"></div><span class="footer__brand-name">RJ's Tree Care</span></div><p>Licensed, insured, and family owned — serving the area for over two decades.</p></div><div><h4>Services</h4><ul class="footer__links"><li><a href="tree-removal.html" class="footer__link">Tree Removal</a></li><li><a href="trimming-pruning.html" class="footer__link">Trimming & Pruning</a></li><li><a href="stump-grinding.html" class="footer__link">Stump Grinding</a></li><li><a href="emergency.html" class="footer__link">Emergency Service</a></li></ul></div><div><h4>Company</h4><ul class="footer__links"><li><a href="about.html" class="footer__link">About Us</a></li><li><a href="gallery.html" class="footer__link">Gallery</a></li><li><a href="faq.html" class="footer__link">FAQ</a></li><li><a href="wall-of-love.html" class="footer__link">Reviews</a></li><li><a href="contact.html" class="footer__link">Contact</a></li></ul></div><div><h4>Emergency Line</h4><div class="footer__contact"><div class="footer__contact-item"><span>🚨</span><a href="tel:7655703398" class="footer__link" style="color:white;font-weight:700;">(765) 570-3398</a></div><div class="footer__contact-item"><span>✉️</span><a href="mailto:info@rjstreecare.com" class="footer__link" style="color:white;">info@rjstreecare.com</a></div><div class="footer__contact-item"><span>🕐</span><span>Reach out — we prioritize urgent calls</span></div></div></div></div><div class="footer__bottom"><span>© 2025 RJ's Tree Care.</span><div class="footer__license"><span>🛡️ Licensed & Insured</span></div></div></div></footer>
 <div class="sticky-cta"><div class="sticky-cta__top"><span class="sticky-cta__label">🚨 Urgent? Call now</span></div><div class="sticky-cta__btns"><a href="tel:7655703398" class="sticky-cta__call" style="background:var(--red-em);">📞 Emergency Line</a><a href="contact.html" class="sticky-cta__quote">Non-Emergency</a></div></div>
 <script src="js/main.js"></script>
-</body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+      })
+    }
+  </script></body>
 </html>
 

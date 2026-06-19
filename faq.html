@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does tree removal cost?","acceptedAnswer":{"@type":"Answer","text":"Tree removal costs vary based on the size, species, condition, location, and accessibility of the tree — every job is different. We don't quote a price over the phone. We come to your property, look at the tree in person, and give you a written quote with no obligation."}},{"@type":"Question","name":"Are you licensed and insured?","acceptedAnswer":{"@type":"Answer","text":"Yes — RJ's Tree Care is fully insured, with 22+ years of hands-on experience. Indiana doesn't require a special license for tree service work, but we're happy to provide proof of insurance before any job."}},{"@type":"Question","name":"Do you offer free estimates?","acceptedAnswer":{"@type":"Answer","text":"Yes — all estimates are free with no obligation. We come to your property, assess the tree, discuss the work, and provide a written quote. We typically respond same day."}},{"@type":"Question","name":"Do you offer emergency tree service?","acceptedAnswer":{"@type":"Answer","text":"Yes. If you have storm damage or a dangerous tree, call (765) 570-3398 and we'll do everything we can to get to you quickly. We're a small, honest crew — we prioritize what we can when we can and move as fast as possible for urgent situations."}}]}</script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2d6a2d">
+  <link rel="apple-touch-icon" href="/icon-192.svg">
 </head>
 <body>
 <div class="emergency-bar">🚨 Storm damage or a dangerous tree? Reach out — we prioritize urgent situations as fast as we can. <a href="tel:7655703398">Call Now: (765) 570-3398</a></div>
@@ -102,6 +105,12 @@
 <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><div class="footer__brand-logo"><div class="footer__brand-icon footer__brand-icon--img"><img src="images/rj/business-sign.jpg" alt="RJ's Tree Care logo"></div><span class="footer__brand-name">RJ's Tree Care</span></div><p>Licensed, insured, and family owned. Serving the area with over two decades of hands-on tree care experience.</p></div><div><h4>Services</h4><ul class="footer__links"><li><a href="tree-removal.html" class="footer__link">Tree Removal</a></li><li><a href="trimming-pruning.html" class="footer__link">Trimming & Pruning</a></li><li><a href="stump-grinding.html" class="footer__link">Stump Grinding</a></li><li><a href="emergency.html" class="footer__link">Emergency Service</a></li></ul></div><div><h4>Company</h4><ul class="footer__links"><li><a href="about.html" class="footer__link">About Us</a></li><li><a href="gallery.html" class="footer__link">Gallery</a></li><li><a href="faq.html" class="footer__link">FAQ</a></li><li><a href="wall-of-love.html" class="footer__link">Reviews</a></li><li><a href="contact.html" class="footer__link">Contact</a></li></ul></div><div><h4>Contact</h4><div class="footer__contact"><div class="footer__contact-item"><span>📞</span><a href="tel:7655703398" class="footer__link" style="color:var(--white);">(765) 570-3398</a></div><div class="footer__contact-item"><span>✉️</span><a href="mailto:info@rjstreecare.com" class="footer__link" style="color:var(--white);">info@rjstreecare.com</a></div></div></div></div><div class="footer__bottom"><span>© 2025 RJ's Tree Care.</span></div></div></footer>
 <div class="sticky-cta"><div class="sticky-cta__top"><span class="sticky-cta__label">Questions? We're happy to help</span></div><div class="sticky-cta__btns"><a href="tel:7655703398" class="sticky-cta__call">📞 Call Now</a><a href="contact.html" class="sticky-cta__quote">Free Quote</a></div></div>
 <script src="js/main.js"></script>
-</body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+      })
+    }
+  </script></body>
 </html>
 

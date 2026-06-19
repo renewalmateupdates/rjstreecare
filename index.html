@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -48,6 +48,9 @@
   }
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2d6a2d">
+  <link rel="apple-touch-icon" href="/icon-192.svg">
 </head>
 <body>
 
@@ -525,5 +528,11 @@
 </div>
 
 <script src="js/main.js"></script>
-</body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+      })
+    }
+  </script></body>
 </html>
