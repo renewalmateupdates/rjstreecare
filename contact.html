@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,6 +6,9 @@
   <meta name="description" content="Request a free tree service estimate in Dillsboro, Rushville, or anywhere along our Cincinnati / Northern Kentucky service corridor. Call (765) 570-3398 or fill out our form. Same-day response. Licensed & insured.">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2d6a2d">
+  <link rel="apple-touch-icon" href="/icon-192.svg">
 </head>
 <body>
 <div class="emergency-bar">🚨 Storm damage or a dangerous tree? Reach out — we prioritize urgent situations as fast as we can. <a href="tel:7655703398">Call Now: (765) 570-3398</a></div>
@@ -117,6 +120,12 @@
 <div class="sticky-cta"><div class="sticky-cta__top"><span class="sticky-cta__label">Get your free estimate today</span></div><div class="sticky-cta__btns"><a href="tel:7655703398" class="sticky-cta__call">📞 Call Now</a><a href="#contact-form" class="sticky-cta__quote">Fill Out Form</a></div></div>
 <script src="js/main.js"></script>
 <script>document.querySelector('.form-success').style.display='none';</script>
-</body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+      })
+    }
+  </script></body>
 </html>
 

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="80" fill="#1a3d1a"/>
+  <!-- Tree trunk -->
+  <rect x="232" y="340" width="48" height="100" rx="10" fill="#6b4226"/>
+  <!-- Tree layers -->
+  <polygon points="256,60 376,240 136,240" fill="#2d7a2d"/>
+  <polygon points="256,120 388,290 124,290" fill="#34a134"/>
+  <polygon points="256,180 400,350 112,350" fill="#3dbf3d"/>
+</svg>

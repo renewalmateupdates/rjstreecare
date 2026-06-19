@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,6 +6,9 @@
   <meta name="description" content="Real photos of RJ's Tree Care on the job — tree removal, trimming, and stump grinding around Dillsboro, Rushville, and the surrounding area.">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2d6a2d">
+  <link rel="apple-touch-icon" href="/icon-192.svg">
 </head>
 <body>
 <div class="emergency-bar">🚨 Storm damage or a dangerous tree? Reach out — we prioritize urgent situations as fast as we can. <a href="tel:7655703398">Call Now: (765) 570-3398</a></div>
@@ -71,6 +74,12 @@ function filterGallery(cat) {
   });
 }
 </script>
-</body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+      })
+    }
+  </script></body>
 </html>
 

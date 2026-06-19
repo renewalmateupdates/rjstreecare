@@ -1,0 +1,44 @@
+{
+  "name": "RJ's Tree Care",
+  "short_name": "RJ's Trees",
+  "description": "Professional tree service — Dillsboro & Rushville, IN. Free estimates. Call (765) 570-3398.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#1a2e1a",
+  "theme_color": "#2d6a2d",
+  "categories": ["business", "home"],
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/business-sign.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Call Now",
+      "url": "tel:7655703398",
+      "description": "Call RJ's Tree Care"
+    },
+    {
+      "name": "Get Estimate",
+      "url": "/contact.html",
+      "description": "Request a free estimate"
+    }
+  ]
+}
