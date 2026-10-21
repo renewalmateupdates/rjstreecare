@@ -4,6 +4,8 @@
    =================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Seasonal fall theme. Delete the next line to switch it off (see css/fall.css). */
+@import url('fall.css');
 
 /* === VARIABLES === */
 :root {
@@ -514,6 +516,30 @@ p:last-child { margin-bottom: 0; }
 }
 .feature-item p { margin: 0; color: var(--text); font-size: .95rem; }
 
+/* === RECENT WORK (VIDEOS + TRAILER SIGN) === */
+.work-videos {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  max-width: 940px; margin: 0 auto;
+}
+.work-video { margin: 0; min-width: 0; }
+.work-video video {
+  display: block; width: 100%; height: auto; aspect-ratio: 9/16; object-fit: cover;
+  background: var(--dark); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);
+}
+.work-video figcaption { padding: .9rem .25rem 0; }
+.work-video figcaption strong { display: block; color: var(--forest); font-size: 1rem; }
+.work-video figcaption span { display: block; color: var(--text-muted); font-size: .875rem; }
+.work-videos__hint { display: none; text-align: center; color: var(--text-muted); font-size: .8rem; margin-top: .5rem; }
+.sign-feature {
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: center;
+  max-width: 940px; margin: 3.5rem auto 0; padding: 1.5rem;
+  background: var(--white); border: 1px solid var(--cream-dark);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+}
+.sign-feature img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-md); }
+.sign-feature h3 { margin-bottom: .75rem; }
+.sign-feature p { color: var(--text-muted); margin-bottom: 1.5rem; }
+
 /* === SCROLL FADE === */
 .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
@@ -560,6 +586,16 @@ html, body { overflow-x: hidden; }
 
   /* Gallery */
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Recent work videos: swipeable row, next clip peeks in from the right */
+  .work-videos {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 74%;
+    gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory;
+    margin: 0 -1.5rem; padding: 0 1.5rem .5rem; scroll-padding: 0 1.5rem;
+  }
+  .work-video { scroll-snap-align: start; }
+  .work-videos__hint { display: block; }
+  .sign-feature { grid-template-columns: 1fr; gap: 1.25rem; padding: 1rem; margin-top: 2.5rem; }
 
   /* Forms */
   .form-row { grid-template-columns: 1fr; }
