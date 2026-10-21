@@ -1,4 +1,5 @@
-const CACHE = 'rjtreecare-v1'
+// Bump this name whenever cached files must be refreshed for returning visitors
+const CACHE = 'rjtreecare-v2'
 const STATIC = [
   '/',
   '/index.html',
@@ -36,8 +37,10 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return
   const url = new URL(e.request.url)
-  // HTML pages: network-first (always get fresh content), fall back to cache
-  if (url.pathname.endsWith('.html') || url.pathname === '/') {
+  // Videos stream in byte ranges, which the cache can't store: let the browser fetch them directly
+  if (e.request.headers.has('range') || url.pathname.endsWith('.mp4')) return
+  // HTML, CSS and JS: network-first (always get fresh content, like the seasonal theme switch), fall back to cache
+  if (url.pathname.endsWith('.html') || url.pathname === '/' || url.pathname.endsWith('.css') || url.pathname.endsWith('.js')) {
     e.respondWith(
       fetch(e.request)
         .then((res) => { caches.open(CACHE).then((c) => c.put(e.request, res.clone())); return res })
@@ -45,7 +48,7 @@ self.addEventListener('fetch', (e) => {
     )
     return
   }
-  // CSS/images/fonts: cache-first
+  // Images/fonts: cache-first
   e.respondWith(
     caches.match(e.request).then((cached) => {
       if (cached) return cached

@@ -156,4 +156,40 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeEls.forEach(el => el.classList.add('visible'));
   }
 
+  /* ── Recent Work Videos ─────────── */
+  // Only one clip plays at a time
+  const workVideos = document.querySelectorAll('.work-video video');
+  workVideos.forEach(video => {
+    video.addEventListener('play', () => {
+      workVideos.forEach(other => { if (other !== video) other.pause(); });
+    });
+  });
+
+  /* ── Seasonal Falling Leaves ────── */
+  // Runs only while css/fall.css is switched on (it sets --fall-leaves: on)
+  const leavesOn = getComputedStyle(document.documentElement).getPropertyValue('--fall-leaves').trim() === 'on';
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (leavesOn && !reduceMotion) {
+    const layer = document.createElement('div');
+    layer.className = 'fall-leaves';
+    layer.setAttribute('aria-hidden', 'true');
+    const count = window.innerWidth < 640 ? 6 : 10;
+    let longest = 0;
+    for (let i = 0; i < count; i++) {
+      const leaf = document.createElement('span');
+      const size = 14 + Math.round(Math.random() * 12);
+      const duration = 9 + Math.random() * 6;
+      const delay = Math.random() * 7;
+      leaf.className = `fall-leaf fall-leaf--${(i % 4) + 1}${i % 2 ? ' fall-leaf--alt' : ''}`;
+      leaf.style.left = `${((i + Math.random()) / count * 96).toFixed(1)}%`;
+      leaf.style.width = leaf.style.height = `${size}px`;
+      leaf.style.animationDuration = `${duration.toFixed(1)}s`;
+      leaf.style.animationDelay = `${delay.toFixed(1)}s`;
+      layer.appendChild(leaf);
+      longest = Math.max(longest, delay + duration * 2); // each leaf falls twice
+    }
+    document.body.appendChild(layer);
+    setTimeout(() => layer.remove(), (longest + 1) * 1000);
+  }
+
 });
