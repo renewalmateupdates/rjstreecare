@@ -12,7 +12,7 @@
   <meta name="geo.placename" content="Dillsboro, Indiana">
   <meta name="geo.position" content="38.9886;-85.0739">
   <meta name="ICBM" content="38.9886, -85.0739">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -349,34 +349,27 @@
     <div class="text-center" style="margin-bottom:2.5rem;">
       <span class="section-label">Recent Work</span>
       <h2 class="section-title">Watch Us Work</h2>
-      <p class="section-subtitle">Short clips from recent jobs. Tap play to watch. The videos have no sound.</p>
+      <p class="section-subtitle">Short clips from recent jobs. Tap one to watch. The videos have no sound.</p>
     </div>
-    <div class="work-videos">
-      <figure class="work-video">
-        <video playsinline controls muted preload="metadata" poster="video/pine-topping.jpg" width="480" height="854" aria-label="Video: topping a tall pine">
-          <source src="video/pine-topping.mp4" type="video/mp4">
-        </video>
-        <figcaption><strong>Topping a Tall Pine</strong><span>Bringing the top down out of a pine that towers over the yard.</span></figcaption>
-      </figure>
-      <figure class="work-video">
-        <video playsinline controls muted preload="metadata" poster="video/leaning-tree-felling.jpg" width="480" height="854" aria-label="Video: dropping a leaning tree">
-          <source src="video/leaning-tree-felling.mp4" type="video/mp4">
-        </video>
-        <figcaption><strong>Dropping a Leaning Tree</strong><span>Laid down in the open yard, clear of the garage.</span></figcaption>
-      </figure>
-      <figure class="work-video">
-        <video playsinline controls muted preload="metadata" poster="video/climber-sectional-removal.jpg" width="480" height="854" aria-label="Video: climbing a tree removal">
-          <source src="video/climber-sectional-removal.mp4" type="video/mp4">
-        </video>
-        <figcaption><strong>Climbing a Removal</strong><span>Taking a tree down from the top, one piece at a time.</span></figcaption>
-      </figure>
+    <div class="work-cards">
+      <a class="work-card" href="video/pine-topping.mp4" data-poster="video/pine-topping.jpg" aria-label="Play video: Topping a Tall Pine, 40 seconds">
+        <span class="work-card__thumb"><img src="video/pine-topping-thumb.jpg" alt="" width="480" height="600" loading="lazy"><span class="work-card__play" aria-hidden="true"></span><span class="work-card__time">0:40</span></span>
+        <span class="work-card__text"><strong>Topping a Tall Pine</strong><span>Bringing the top down out of a pine that towers over the yard.</span></span>
+      </a>
+      <a class="work-card" href="video/leaning-tree-felling.mp4" data-poster="video/leaning-tree-felling.jpg" aria-label="Play video: Dropping a Leaning Tree, 43 seconds">
+        <span class="work-card__thumb"><img src="video/leaning-tree-felling-thumb.jpg" alt="" width="480" height="600" loading="lazy"><span class="work-card__play" aria-hidden="true"></span><span class="work-card__time">0:43</span></span>
+        <span class="work-card__text"><strong>Dropping a Leaning Tree</strong><span>Laid down in the open yard, clear of the garage.</span></span>
+      </a>
+      <a class="work-card" href="video/climber-sectional-removal.mp4" data-poster="video/climber-sectional-removal.jpg" aria-label="Play video: Climbing a Removal, 32 seconds">
+        <span class="work-card__thumb"><img src="video/climber-sectional-removal-thumb.jpg" alt="" width="480" height="600" loading="lazy"><span class="work-card__play" aria-hidden="true"></span><span class="work-card__time">0:32</span></span>
+        <span class="work-card__text"><strong>Climbing a Removal</strong><span>Taking a tree down from the top, one piece at a time.</span></span>
+      </a>
     </div>
-    <p class="work-videos__hint">Swipe to see more clips</p>
 
     <div class="sign-feature">
       <picture>
-        <source type="image/webp" srcset="images/rj/trailer-sign-720.webp 720w, images/rj/trailer-sign-1200.webp 1200w" sizes="(max-width: 768px) 100vw, 520px">
-        <img src="images/rj/trailer-sign-720.jpg" srcset="images/rj/trailer-sign-720.jpg 720w, images/rj/trailer-sign-1200.jpg 1200w" sizes="(max-width: 768px) 100vw, 520px" width="1200" height="600" loading="lazy" alt="RJ's Tree Care LED trailer sign with a Halloween background: Removals and Trims, Stump Removal, 765-570-3398">
+        <source type="image/webp" srcset="images/rj/trailer-sign-720.webp 720w, images/rj/trailer-sign-1200.webp 1200w, images/rj/trailer-sign-2400.webp 2400w" sizes="(max-width: 768px) 100vw, 460px">
+        <img src="images/rj/trailer-sign-1200.jpg" width="1200" height="600" loading="lazy" alt="RJ's Tree Care trailer sign graphic with Halloween decorations: Removals and Trims, Stump Removal, 765-570-3398">
       </picture>
       <div>
         <span class="section-label">Spot Us Around Town</span>
@@ -573,7 +566,7 @@
   </div>
 </div>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

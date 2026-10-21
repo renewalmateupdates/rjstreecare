@@ -156,14 +156,54 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeEls.forEach(el => el.classList.add('visible'));
   }
 
-  /* ── Recent Work Videos ─────────── */
-  // Only one clip plays at a time
-  const workVideos = document.querySelectorAll('.work-video video');
-  workVideos.forEach(video => {
-    video.addEventListener('play', () => {
-      workVideos.forEach(other => { if (other !== video) other.pause(); });
+  /* ── Job Video Player ───────────── */
+  // Each card links straight to its .mp4 (still works without JS); this plays it in a pop-up instead
+  const workCards = document.querySelectorAll('.work-card');
+  if (workCards.length) {
+    const modal = document.createElement('div');
+    modal.className = 'video-modal';
+    modal.hidden = true;
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', 'Job video');
+    modal.innerHTML = '<div class="video-modal__box"><button type="button" class="video-modal__close" aria-label="Close video">✕</button><video playsinline controls muted preload="none"></video><p class="video-modal__title"></p></div>';
+    document.body.appendChild(modal);
+    const player = modal.querySelector('video');
+    const title = modal.querySelector('.video-modal__title');
+    const closeBtn = modal.querySelector('.video-modal__close');
+    let opener = null;
+
+    const closeVideo = () => {
+      player.pause();
+      player.removeAttribute('src');
+      player.load(); // stops the download
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (opener) opener.focus();
+    };
+
+    workCards.forEach(card => {
+      card.addEventListener('click', e => {
+        e.preventDefault();
+        opener = card;
+        player.poster = card.dataset.poster || '';
+        player.src = card.getAttribute('href');
+        title.textContent = card.querySelector('strong')?.textContent || '';
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+        player.play().catch(() => {}); // the controls are still there if a browser holds off
+      });
     });
-  });
+
+    closeBtn.addEventListener('click', closeVideo);
+    modal.addEventListener('click', e => { if (e.target === modal) closeVideo(); });
+    document.addEventListener('keydown', e => {
+      if (modal.hidden) return;
+      if (e.key === 'Escape') closeVideo();
+      if (e.key === 'Tab') { e.preventDefault(); (document.activeElement === closeBtn ? player : closeBtn).focus(); }
+    });
+  }
 
   /* ── Seasonal Falling Leaves ────── */
   // Runs only while css/fall.css is switched on (it sets --fall-leaves: on)
