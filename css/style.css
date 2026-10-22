@@ -516,7 +516,7 @@ p:last-child { margin-bottom: 0; }
 }
 .feature-item p { margin: 0; color: var(--text); font-size: .95rem; }
 
-/* === RECENT WORK (VIDEOS + TRAILER SIGN) === */
+/* === RECENT WORK (VIDEOS + SIGN AD) === */
 .work-cards {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
   max-width: 820px; margin: 0 auto;
