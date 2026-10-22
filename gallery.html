@@ -4,7 +4,7 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Work | RJ's Tree Care | Dillsboro & Rushville, IN</title>
   <meta name="description" content="Real photos and videos of RJ's Tree Care on the job: tree removal, trimming, and stump grinding around Dillsboro, Rushville, and the surrounding area.">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
   <script defer src="/_vercel/insights/script.js"></script>
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#2d6a2d">
@@ -29,29 +29,22 @@
     <div style="margin-bottom:2rem;">
       <span class="section-label">Video</span>
       <h2 class="section-title">Recent Jobs on Video</h2>
-      <p class="section-subtitle">Short clips from recent jobs. Tap play to watch. The videos have no sound.</p>
+      <p class="section-subtitle">Short clips from recent jobs. Tap one to watch. The videos have no sound.</p>
     </div>
-    <div class="work-videos">
-      <figure class="work-video">
-        <video playsinline controls muted preload="metadata" poster="video/pine-topping.jpg" width="480" height="854" aria-label="Video: topping a tall pine">
-          <source src="video/pine-topping.mp4" type="video/mp4">
-        </video>
-        <figcaption><strong>Topping a Tall Pine</strong><span>Bringing the top down out of a pine that towers over the yard.</span></figcaption>
-      </figure>
-      <figure class="work-video">
-        <video playsinline controls muted preload="metadata" poster="video/leaning-tree-felling.jpg" width="480" height="854" aria-label="Video: dropping a leaning tree">
-          <source src="video/leaning-tree-felling.mp4" type="video/mp4">
-        </video>
-        <figcaption><strong>Dropping a Leaning Tree</strong><span>Laid down in the open yard, clear of the garage.</span></figcaption>
-      </figure>
-      <figure class="work-video">
-        <video playsinline controls muted preload="metadata" poster="video/climber-sectional-removal.jpg" width="480" height="854" aria-label="Video: climbing a tree removal">
-          <source src="video/climber-sectional-removal.mp4" type="video/mp4">
-        </video>
-        <figcaption><strong>Climbing a Removal</strong><span>Taking a tree down from the top, one piece at a time.</span></figcaption>
-      </figure>
+    <div class="work-cards">
+      <a class="work-card" href="video/pine-topping.mp4" data-poster="video/pine-topping.jpg" aria-label="Play video: Topping a Tall Pine, 40 seconds">
+        <span class="work-card__thumb"><img src="video/pine-topping-thumb.jpg" alt="" width="480" height="600" loading="lazy"><span class="work-card__play" aria-hidden="true"></span><span class="work-card__time">0:40</span></span>
+        <span class="work-card__text"><strong>Topping a Tall Pine</strong><span>Bringing the top down out of a pine that towers over the yard.</span></span>
+      </a>
+      <a class="work-card" href="video/leaning-tree-felling.mp4" data-poster="video/leaning-tree-felling.jpg" aria-label="Play video: Dropping a Leaning Tree, 43 seconds">
+        <span class="work-card__thumb"><img src="video/leaning-tree-felling-thumb.jpg" alt="" width="480" height="600" loading="lazy"><span class="work-card__play" aria-hidden="true"></span><span class="work-card__time">0:43</span></span>
+        <span class="work-card__text"><strong>Dropping a Leaning Tree</strong><span>Laid down in the open yard, clear of the garage.</span></span>
+      </a>
+      <a class="work-card" href="video/climber-sectional-removal.mp4" data-poster="video/climber-sectional-removal.jpg" aria-label="Play video: Climbing a Removal, 32 seconds">
+        <span class="work-card__thumb"><img src="video/climber-sectional-removal-thumb.jpg" alt="" width="480" height="600" loading="lazy"><span class="work-card__play" aria-hidden="true"></span><span class="work-card__time">0:32</span></span>
+        <span class="work-card__text"><strong>Climbing a Removal</strong><span>Taking a tree down from the top, one piece at a time.</span></span>
+      </a>
     </div>
-    <p class="work-videos__hint">Swipe to see more clips</p>
   </div>
 </section>
 
@@ -66,7 +59,6 @@
     </div>
 
     <div class="gallery-grid" id="gallery-grid" style="grid-template-columns:repeat(3,1fr);">
-      <div class="gallery-item" data-category="equipment"><img src="images/rj/trailer-sign-1200.jpg" alt="RJ's Tree Care LED trailer sign with a Halloween background: Removals and Trims, Stump Removal, 765-570-3398" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">Our new LED trailer sign. If you see it at a job, that's us.</span></div></div>
       <div class="gallery-item" data-category="removal"><img src="images/rj/crane.jpg" alt="Crane lifting tree sections during a residential tree removal" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">Crane-assisted removal — handling the big ones safely</span></div></div>
       <div class="gallery-item" data-category="trimming"><img src="images/rj/bucket-tree.jpg" alt="Bucket truck reaching into a tall canopy for a trim job" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">Working the canopy from the bucket</span></div></div>
       <div class="gallery-item" data-category="stump"><img src="images/rj/stump-removal.jpg" alt="Ron operating a stump grinder on a residential lawn" loading="lazy"><div class="gallery-item__overlay"><span class="gallery-item__label">Grinding a stump level with the lawn</span></div></div>
@@ -93,7 +85,7 @@
 <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><div class="footer__brand-logo"><div class="footer__brand-icon footer__brand-icon--img"><img src="images/rj/business-sign.jpg" alt="RJ's Tree Care logo"></div><span class="footer__brand-name">RJ's Tree Care</span></div><p>Licensed, insured, and family owned. Serving the area with over two decades of hands-on tree care experience.</p></div><div><h4>Services</h4><ul class="footer__links"><li><a href="tree-removal.html" class="footer__link">Tree Removal</a></li><li><a href="trimming-pruning.html" class="footer__link">Trimming & Pruning</a></li><li><a href="stump-grinding.html" class="footer__link">Stump Grinding</a></li><li><a href="emergency.html" class="footer__link">Emergency Service</a></li></ul></div><div><h4>Company</h4><ul class="footer__links"><li><a href="about.html" class="footer__link">About Us</a></li><li><a href="gallery.html" class="footer__link">Gallery</a></li><li><a href="faq.html" class="footer__link">FAQ</a></li><li><a href="wall-of-love.html" class="footer__link">Reviews</a></li><li><a href="contact.html" class="footer__link">Contact</a></li></ul></div><div><h4>Contact</h4><div class="footer__contact"><div class="footer__contact-item"><span>📞</span><a href="tel:7655703398" class="footer__link" style="color:var(--white);">(765) 570-3398</a></div><div class="footer__contact-item"><span>✉️</span><a href="mailto:info@rjstreecare.com" class="footer__link" style="color:var(--white);">info@rjstreecare.com</a></div></div></div></div><div class="footer__bottom"><span>© 2025 RJ's Tree Care.</span></div></div></footer>
 <div class="sticky-cta"><div class="sticky-cta__top"><span class="sticky-cta__label">See our work — get yours done</span></div><div class="sticky-cta__btns"><a href="tel:7655703398" class="sticky-cta__call">📞 Call Now</a><a href="contact.html" class="sticky-cta__quote">Free Quote</a></div></div>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3"></script>
 <script>
 function filterGallery(cat) {
   document.querySelectorAll('.gallery-item').forEach(item => {
