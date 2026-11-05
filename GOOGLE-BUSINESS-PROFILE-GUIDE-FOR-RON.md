@@ -1,6 +1,6 @@
 # Setting Up RJ's Tree Care on Google (Free) — A Walkthrough for Ron
 
-This is the single highest-impact free thing RJ's Tree Care can do online. When someone in Dillsboro, Rushville, Batesville, or anywhere nearby searches "tree service near me" on Google or Google Maps, this is what shows up — the map, the star rating, the phone number, the photos. It costs nothing and takes about 20 minutes to set up.
+This is the single highest-impact free thing RJ's Tree Care can do online. When someone in Dillsboro, Aurora, Greendale, or anywhere nearby searches "tree service near me" on Google or Google Maps, this is what shows up — the map, the star rating, the phone number, the photos. It costs nothing and takes about 20 minutes to set up.
 
 ---
 
@@ -17,7 +17,7 @@ Use exactly this — consistency matters for how Google ranks the listing:
 - **Business name:** RJ's Tree Care
 - **Category:** Tree service (primary). You can add secondary categories like "Landscaper" or "Stump removal service" if Google offers them.
 - **Address:** 9588 Akes Hill Rd, Dillsboro, IN 47018
-- **Service area:** Add it as a service-area business that also serves customers at your location. List the towns you actually run jobs in: Dillsboro, Rushville, Batesville, Moores Hill, Rising Sun, Aurora, Lawrenceburg, Greendale, plus the Cincinnati OH tri-state area, and Northern Kentucky towns toward Louisville (Florence, Bellevue, Newport, Covington, Alexandria, Highland Heights, Hebron, Burlington, Ludlow).
+- **Service area:** Add it as a service-area business that also serves customers at your location. List the towns you actually run jobs in, within about 30 miles of Dillsboro: Dillsboro, Aurora, Greendale, Lawrenceburg, Moores Hill, Milan, Rising Sun, Versailles, Batesville, plus Harrison and the west side of Cincinnati in Ohio, and Northern Kentucky across the river (Petersburg, Burlington, Hebron, Union, Florence, Covington).
 - **Phone:** (765) 570-3398
 - **Website:** the RJ's Tree Care website URL (once it's live)
 - **Hours:** whatever Ron's actual hours are — and make sure to mark whether 24/7 emergency calls are taken, since that's a real differentiator
@@ -46,7 +46,7 @@ Upload at least 5–10 to start, and add new ones every few weeks as new jobs ge
 
 Keep it short, honest, and in Ron's voice. Something like:
 
-> "RJ's Tree Care is a family-owned tree service based in Dillsboro and Rushville, Indiana, with over 22 years of hands-on experience. We handle tree removal, trimming and pruning, stump grinding, and 24/7 emergency response — serving Southeast Indiana, the Cincinnati tri-state area, and Northern Kentucky toward Louisville. Licensed, insured, and known for one thing above all: we clean up like we wasn't even there."
+> "RJ's Tree Care is a family-owned tree service based in Dillsboro, Indiana, with over 22 years of hands-on experience. We handle tree removal, trimming and pruning, stump grinding, and 24/7 emergency response — serving southeast Indiana, the Cincinnati tri-state area and nearby Northern Kentucky. Licensed, insured, and known for one thing above all: we clean up like we wasn't even there."
 
 ## Step 6: Turn On Messaging and Q&A
 
