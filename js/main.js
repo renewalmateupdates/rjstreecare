@@ -232,4 +232,30 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => layer.remove(), (longest + 1) * 1000);
   }
 
+  /* ── Seasonal Snow ────── */
+  // Runs only while css/seasons.css sets --snow: on (holiday and winter months)
+  const snowOn = getComputedStyle(document.documentElement).getPropertyValue('--snow').trim() === 'on';
+  if (snowOn && !reduceMotion) {
+    const flurry = document.createElement('div');
+    flurry.className = 'season-snow';
+    flurry.setAttribute('aria-hidden', 'true');
+    const flakes = window.innerWidth < 640 ? 10 : 18;
+    let lastFlake = 0;
+    for (let i = 0; i < flakes; i++) {
+      const flake = document.createElement('span');
+      const size = 3 + Math.round(Math.random() * 4);
+      const duration = 8 + Math.random() * 5;
+      const delay = Math.random() * 6;
+      flake.className = `snowflake${i % 2 ? ' snowflake--alt' : ''}`;
+      flake.style.left = `${((i + Math.random()) / flakes * 98).toFixed(1)}%`;
+      flake.style.width = flake.style.height = `${size}px`;
+      flake.style.animationDuration = `${duration.toFixed(1)}s`;
+      flake.style.animationDelay = `${delay.toFixed(1)}s`;
+      flurry.appendChild(flake);
+      lastFlake = Math.max(lastFlake, delay + duration * 2); // each flake falls twice
+    }
+    document.body.appendChild(flurry);
+    setTimeout(() => flurry.remove(), (lastFlake + 1) * 1000);
+  }
+
 });

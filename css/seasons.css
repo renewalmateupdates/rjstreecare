@@ -1,0 +1,106 @@
+/* ===================================
+   RJ'S TREE CARE: Holiday, winter and spring looks
+
+   js/season.js sets <html data-season="..."> from the month; each block below
+   only applies in its season (fall lives in css/fall.css). Summer uses none of
+   this. Same pattern as fall: every selector starts with html[data-season] to
+   outrank the base rules, and nothing else on the site needs to change.
+   =================================== */
+
+/* ── December: holiday (red, evergreen and gold, light snow) ── */
+html[data-season="holiday"] {
+  --season-strip: linear-gradient(90deg, #7A1A1A 0%, #B22222 24%, #1F5130 50%, #C9A227 76%, #7A1A1A 100%);
+  --season-accent: #E2B13C;
+  --season-hover: #B22222;
+  --snow: on; /* js/main.js reads this to drop a little snow on page load */
+}
+html[data-season="holiday"] .hero {
+  background:
+    radial-gradient(ellipse 60% 55% at 95% 100%, rgba(178,34,34,.30), transparent 70%),
+    radial-gradient(ellipse 40% 35% at 70% 0%, rgba(201,162,39,.20), transparent 70%),
+    linear-gradient(135deg, var(--dark) 0%, #1A3C1F 50%, #2D5A27 100%);
+}
+html[data-season="holiday"] .page-hero {
+  background:
+    radial-gradient(ellipse 55% 90% at 100% 100%, rgba(178,34,34,.28), transparent 70%),
+    linear-gradient(135deg, var(--dark) 0%, var(--forest) 100%);
+}
+
+/* ── January and February: winter (icy blue, light snow) ── */
+html[data-season="winter"] {
+  --season-strip: linear-gradient(90deg, #3E5F7A 0%, #6E93B3 30%, #CFE2F0 50%, #6E93B3 70%, #3E5F7A 100%);
+  --season-accent: #A9C9E3;
+  --season-hover: #6E93B3;
+  --snow: on;
+}
+html[data-season="winter"] .hero {
+  background:
+    radial-gradient(ellipse 60% 55% at 95% 100%, rgba(110,147,179,.28), transparent 70%),
+    linear-gradient(135deg, var(--dark) 0%, #1A3C1F 50%, #2D5A27 100%);
+}
+html[data-season="winter"] .page-hero {
+  background:
+    radial-gradient(ellipse 55% 90% at 100% 100%, rgba(110,147,179,.26), transparent 70%),
+    linear-gradient(135deg, var(--dark) 0%, var(--forest) 100%);
+}
+
+/* ── March to May: spring (fresh green and blossom) ── */
+html[data-season="spring"] {
+  --season-strip: linear-gradient(90deg, #2D5A27 0%, #6FA85A 30%, #F2B5C4 50%, #6FA85A 70%, #2D5A27 100%);
+  --season-accent: #B8DD8F;
+  --season-hover: #6FA85A;
+}
+html[data-season="spring"] .hero {
+  background:
+    radial-gradient(ellipse 60% 55% at 95% 100%, rgba(242,181,196,.22), transparent 70%),
+    radial-gradient(ellipse 40% 35% at 70% 0%, rgba(111,168,90,.22), transparent 70%),
+    linear-gradient(135deg, var(--dark) 0%, #1A3C1F 50%, #2D5A27 100%);
+}
+
+/* ── Shared by holiday, winter and spring ── */
+html[data-season="holiday"] .nav::after,
+html[data-season="winter"] .nav::after,
+html[data-season="spring"] .nav::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+  background: var(--season-strip); pointer-events: none;
+}
+html[data-season="holiday"] .footer,
+html[data-season="winter"] .footer,
+html[data-season="spring"] .footer { border-top: 4px solid; border-image: var(--season-strip) 1; }
+html[data-season="holiday"] .sticky-cta,
+html[data-season="winter"] .sticky-cta,
+html[data-season="spring"] .sticky-cta { border-image: var(--season-strip) 1; }
+html[data-season="holiday"] .hero h1 span,
+html[data-season="winter"] .hero h1 span,
+html[data-season="spring"] .hero h1 span,
+html[data-season="holiday"] .proof-item__num,
+html[data-season="winter"] .proof-item__num,
+html[data-season="spring"] .proof-item__num { color: var(--season-accent); }
+html[data-season="holiday"] .service-card:hover,
+html[data-season="winter"] .service-card:hover,
+html[data-season="spring"] .service-card:hover { border-color: var(--season-hover); }
+
+/* ── Snow (created by js/main.js, a short flurry on page load) ── */
+html .season-snow { position: fixed; inset: 0; z-index: 850; pointer-events: none; overflow: hidden; }
+html .snowflake {
+  position: absolute; top: -12px; display: block; border-radius: 50%; opacity: 0;
+  background: #fff; box-shadow: 0 0 3px rgba(70, 100, 130, .55);
+  will-change: transform; animation: season-snow-fall 10s linear 0s 2 both;
+}
+html .snowflake--alt { animation-name: season-snow-fall-alt; }
+@keyframes season-snow-fall {
+  0%   { transform: translate3d(0, 0, 0); opacity: 0; }
+  8%   { opacity: .9; }
+  50%  { transform: translate3d(18px, 50vh, 0); }
+  92%  { opacity: .85; }
+  100% { transform: translate3d(-8px, calc(100vh + 24px), 0); opacity: 0; }
+}
+@keyframes season-snow-fall-alt {
+  0%   { transform: translate3d(0, 0, 0); opacity: 0; }
+  8%   { opacity: .85; }
+  50%  { transform: translate3d(-16px, 52vh, 0); }
+  92%  { opacity: .8; }
+  100% { transform: translate3d(10px, calc(100vh + 24px), 0); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { html .season-snow { display: none; } }
+@media print { html .season-snow { display: none; } }
