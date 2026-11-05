@@ -4,8 +4,10 @@
    =================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-/* Seasonal fall theme. Delete the next line to switch it off (see css/fall.css). */
+/* Seasonal looks, picked by month in js/season.js: fall in css/fall.css,
+   holiday, winter and spring in css/seasons.css. */
 @import url('fall.css');
+@import url('seasons.css');
 
 /* === VARIABLES === */
 :root {

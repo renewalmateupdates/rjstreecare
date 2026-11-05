@@ -1,16 +1,14 @@
 /* ===================================
    RJ'S TREE CARE: Fall Theme (seasonal)
 
-   Switched on by one line near the top of css/style.css:
-     @import url('fall.css');
-   Delete that line to turn the whole fall look off, falling
-   leaves included. Nothing else on the site needs to change.
-
-   This file loads before the rest of style.css, so every
-   selector here starts with "html" to outrank the base rules.
+   Applies September through November: js/season.js sets
+   <html data-season="fall"> from the month, and every rule here
+   starts with html[data-season="fall"], so it switches itself on
+   and off. Preview it any time with ?season=fall in the address.
+   The other seasons live in css/seasons.css.
    =================================== */
 
-html:root {
+html[data-season="fall"] {
   --fall-red:     #B5432A;
   --fall-pumpkin: #C9702C;
   --fall-amber:   #D9A23B;
@@ -22,21 +20,21 @@ html:root {
 }
 
 /* === AUTUMN STRIPS === */
-html .nav::after {
+html[data-season="fall"] .nav::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
   background: var(--fall-strip); pointer-events: none;
 }
-html .footer { border-top: 4px solid; border-image: var(--fall-strip) 1; }
-html .sticky-cta { border-image: var(--fall-strip) 1; }
+html[data-season="fall"] .footer { border-top: 4px solid; border-image: var(--fall-strip) 1; }
+html[data-season="fall"] .sticky-cta { border-image: var(--fall-strip) 1; }
 
 /* === HERO: warm glow + a few big leaves in the corner === */
-html .hero {
+html[data-season="fall"] .hero {
   background:
     radial-gradient(ellipse 60% 55% at 95% 100%, rgba(201,112,44,.32), transparent 70%),
     radial-gradient(ellipse 40% 35% at 70% 0%, rgba(181,67,42,.18), transparent 70%),
     linear-gradient(135deg, var(--dark) 0%, #1A3C1F 50%, #2D5A27 100%);
 }
-html .hero::after {
+html[data-season="fall"] .hero::after {
   content: ''; position: absolute; right: 0; bottom: 0; z-index: 1;
   width: min(46%, 540px); height: 100%; pointer-events: none; opacity: .18;
   background:
@@ -44,36 +42,36 @@ html .hero::after {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath transform='rotate(24 12 12)' fill='%23D9A23B' d='M12 1.5L13.7 5.6L16.3 4.6L15.4 9L19.5 7L18.5 10L22.5 10.8L19.7 13.2L21 15.2L15.7 14.8L16.1 17.4L12.6 15.9L12.6 22.5L11.4 22.5L11.4 15.9L7.9 17.4L8.3 14.8L3 15.2L4.3 13.2L1.5 10.8L5.5 10L4.5 7L8.6 9L7.7 4.6L10.3 5.6Z'/%3E%3C/svg%3E") right 34% bottom 5% / 100px no-repeat,
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23C9702C' d='M12 1.5L13.7 5.6L16.3 4.6L15.4 9L19.5 7L18.5 10L22.5 10.8L19.7 13.2L21 15.2L15.7 14.8L16.1 17.4L12.6 15.9L12.6 22.5L11.4 22.5L11.4 15.9L7.9 17.4L8.3 14.8L3 15.2L4.3 13.2L1.5 10.8L5.5 10L4.5 7L8.6 9L7.7 4.6L10.3 5.6Z'/%3E%3C/svg%3E") right 4% bottom 48% / 76px no-repeat;
 }
-html .hero h1 span { color: var(--fall-amber); }
-html .proof-item__num { color: var(--fall-amber); }
+html[data-season="fall"] .hero h1 span { color: var(--fall-amber); }
+html[data-season="fall"] .proof-item__num { color: var(--fall-amber); }
 
 /* === INNER PAGE HERO: same warm glow === */
-html .page-hero {
+html[data-season="fall"] .page-hero {
   background:
     radial-gradient(ellipse 55% 90% at 100% 100%, rgba(201,112,44,.30), transparent 70%),
     linear-gradient(135deg, var(--dark) 0%, var(--forest) 100%);
 }
 
 /* === SMALL TOUCHES === */
-html .section-label::before {
+html[data-season="fall"] .section-label::before {
   content: ''; display: inline-block; width: 1.05em; height: 1.05em;
   margin-right: .45em; vertical-align: -.18em;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23C9702C' d='M12 1.5L13.7 5.6L16.3 4.6L15.4 9L19.5 7L18.5 10L22.5 10.8L19.7 13.2L21 15.2L15.7 14.8L16.1 17.4L12.6 15.9L12.6 22.5L11.4 22.5L11.4 15.9L7.9 17.4L8.3 14.8L3 15.2L4.3 13.2L1.5 10.8L5.5 10L4.5 7L8.6 9L7.7 4.6L10.3 5.6Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
-html .service-card:hover { border-color: var(--fall-pumpkin); }
+html[data-season="fall"] .service-card:hover { border-color: var(--fall-pumpkin); }
 
 /* === FALLING LEAVES (created by js/main.js, a short shower on page load) === */
-html .fall-leaves { position: fixed; inset: 0; z-index: 850; pointer-events: none; overflow: hidden; }
-html .fall-leaf {
+html[data-season="fall"] .fall-leaves { position: fixed; inset: 0; z-index: 850; pointer-events: none; overflow: hidden; }
+html[data-season="fall"] .fall-leaf {
   position: absolute; top: -32px; display: block; opacity: 0;
   background: center / contain no-repeat; will-change: transform;
   animation: fall-drift 12s linear 0s 2 both;
 }
-html .fall-leaf--alt { animation-name: fall-drift-alt; }
-html .fall-leaf--1 { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23B5432A' d='M12 1.5L13.7 5.6L16.3 4.6L15.4 9L19.5 7L18.5 10L22.5 10.8L19.7 13.2L21 15.2L15.7 14.8L16.1 17.4L12.6 15.9L12.6 22.5L11.4 22.5L11.4 15.9L7.9 17.4L8.3 14.8L3 15.2L4.3 13.2L1.5 10.8L5.5 10L4.5 7L8.6 9L7.7 4.6L10.3 5.6Z'/%3E%3C/svg%3E"); }
-html .fall-leaf--2 { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23C9702C' d='M12 1.5L13.7 5.6L16.3 4.6L15.4 9L19.5 7L18.5 10L22.5 10.8L19.7 13.2L21 15.2L15.7 14.8L16.1 17.4L12.6 15.9L12.6 22.5L11.4 22.5L11.4 15.9L7.9 17.4L8.3 14.8L3 15.2L4.3 13.2L1.5 10.8L5.5 10L4.5 7L8.6 9L7.7 4.6L10.3 5.6Z'/%3E%3C/svg%3E"); }
-html .fall-leaf--3 { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D9A23B' d='M12 1.5L13.7 5.6L16.3 4.6L15.4 9L19.5 7L18.5 10L22.5 10.8L19.7 13.2L21 15.2L15.7 14.8L16.1 17.4L12.6 15.9L12.6 22.5L11.4 22.5L11.4 15.9L7.9 17.4L8.3 14.8L3 15.2L4.3 13.2L1.5 10.8L5.5 10L4.5 7L8.6 9L7.7 4.6L10.3 5.6Z'/%3E%3C/svg%3E"); }
-html .fall-leaf--4 { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%238E5A2B' d='M4 21C4 12 9.5 4.5 21 3C21.6 14.5 15 21 4 21Z'/%3E%3Cpath fill='none' stroke='%23F2E5D3' stroke-opacity='.55' stroke-width='.9' d='M5 20L17.5 7.5'/%3E%3C/svg%3E"); }
+html[data-season="fall"] .fall-leaf--alt { animation-name: fall-drift-alt; }
+html[data-season="fall"] .fall-leaf--1 { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23B5432A' d='M12 1.5L13.7 5.6L16.3 4.6L15.4 9L19.5 7L18.5 10L22.5 10.8L19.7 13.2L21 15.2L15.7 14.8L16.1 17.4L12.6 15.9L12.6 22.5L11.4 22.5L11.4 15.9L7.9 17.4L8.3 14.8L3 15.2L4.3 13.2L1.5 10.8L5.5 10L4.5 7L8.6 9L7.7 4.6L10.3 5.6Z'/%3E%3C/svg%3E"); }
+html[data-season="fall"] .fall-leaf--2 { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23C9702C' d='M12 1.5L13.7 5.6L16.3 4.6L15.4 9L19.5 7L18.5 10L22.5 10.8L19.7 13.2L21 15.2L15.7 14.8L16.1 17.4L12.6 15.9L12.6 22.5L11.4 22.5L11.4 15.9L7.9 17.4L8.3 14.8L3 15.2L4.3 13.2L1.5 10.8L5.5 10L4.5 7L8.6 9L7.7 4.6L10.3 5.6Z'/%3E%3C/svg%3E"); }
+html[data-season="fall"] .fall-leaf--3 { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D9A23B' d='M12 1.5L13.7 5.6L16.3 4.6L15.4 9L19.5 7L18.5 10L22.5 10.8L19.7 13.2L21 15.2L15.7 14.8L16.1 17.4L12.6 15.9L12.6 22.5L11.4 22.5L11.4 15.9L7.9 17.4L8.3 14.8L3 15.2L4.3 13.2L1.5 10.8L5.5 10L4.5 7L8.6 9L7.7 4.6L10.3 5.6Z'/%3E%3C/svg%3E"); }
+html[data-season="fall"] .fall-leaf--4 { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%238E5A2B' d='M4 21C4 12 9.5 4.5 21 3C21.6 14.5 15 21 4 21Z'/%3E%3Cpath fill='none' stroke='%23F2E5D3' stroke-opacity='.55' stroke-width='.9' d='M5 20L17.5 7.5'/%3E%3C/svg%3E"); }
 
 @keyframes fall-drift {
   0%   { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
@@ -93,11 +91,11 @@ html .fall-leaf--4 { background-image: url("data:image/svg+xml,%3Csvg xmlns='htt
 }
 
 @media (max-width: 768px) {
-  html .hero::after { width: 70%; opacity: .1; background-size: 120px, 76px, 56px; }
+  html[data-season="fall"] .hero::after { width: 70%; opacity: .1; background-size: 120px, 76px, 56px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  html .fall-leaves { display: none; }
+  html[data-season="fall"] .fall-leaves { display: none; }
 }
 @media print {
-  html .fall-leaves, html .hero::after { display: none; }
+  html[data-season="fall"] .fall-leaves, html[data-season="fall"] .hero::after { display: none; }
 }
