@@ -1,5 +1,5 @@
 # RJ's Tree Care — robots.txt
-# Tree removal, trimming, stump grinding — Dillsboro & Rushville IN, Cincinnati OH, Northern KY
+# Tree removal, trimming, stump grinding — Dillsboro, Aurora & Greendale IN, Cincinnati OH, Northern KY
 
 User-agent: *
 Allow: /
